@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root
+        {
+            --white:#FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --sm:14px;
+            --md:16px;
+            --lg:18px;
+            --oscuro:#232830;
+        }
+        body
+        {
+            margin:0;
+            font-family:'Quicksand', sans-serif;
+            
+            
+        }
+        #contenedor
+        {
+            width:100%;
+            display:grid;
+            
+        }
+        #header
+        {
+            display:flex;
+            justify-content:space-between;
+            padding:20px;
+            border-bottom:1px solid var(--very-light-pink);
+            
+        }
+        
+        #header img
+        {
+            height: 24px;
+        }
+        
+        #nav
+        {
+            display:flex;
+            flex-direction: column;
+            
+        }
+        #busqueda
+        {
+            display:flex;
+            flex-direction: row;  
+            
+        }
+        #nav input
+        {
+            position:relative;
+            margin:12px;
+            border:none;
+            border-radius:8px;
+            background:var(--text-input-field);
+            height:36px;
+            width:100%;
+            
+            
+        }
+        #nav input::placeholder
+        {
+            padding-left:44px;
+        }
+        #busqueda img
+        {
+            position:absolute;
+            width:24px;
+            height:20px;
+            margin-top:22px; 
+            z-index:1;
+            margin-left:20px;  
+        }
+        #nav ul
+        {
+            list-style:none;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:0;
+            margin:0 12px 0 12px;
+            height:32px;
+            /* list-style:none;
+            padding:0;
+            margin:0;
+            display:flex;
+            align-items:center;
+            height:60px;
+            justify-content:space-between; */
+        }
+        #nav ul a
+        {
+            text-decoration:none;
+            color:var(--very-light-pink);
+            border:1px solid var(--white);
+            padding:12px;
+            border-radius:8px;
+            /* text-decoration:none;
+            color:var(--very-light-pink);
+            border:1px solid var(--white);
+            padding:8px;
+            border-radius:8px; */ 
+        }
+        #nav ul a:hover
+        {
+            border: 1px solid var(--hospital-green);
+            color:var(--hospital-green);
+        }
+        #section
+        {
+            text-align:center;
+            color:var(--very-light-pink);
+            font-weight:300;
+        }
+        #negrita
+        {
+            color:#000000;
+        }
+        #section img
+        {
+            transform: rotate(90deg);
+            filter:invert(100%);
+            color:var(--black)
+        }
+        #article
+        {
+            display:grid;
+            grid-template-columns: repeat(auto-fill,160px);
+            place-content:center;
+            gap:24px;
+            
+        }
+        #remove
+        {
+            display:inline-block;
+            width:160px;
+            height:212px;
+        }
+        #remove div:nth-child(1)
+        {
+            position:relative;
+            display:inline-block;
+            text-align:center;
+        }
+        #pespecial
+        {   
+            color:transparent;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #pespecial:hover
+        {   
+            background-color:white;
+            color:black;
+            opacity:0.73;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border:1px solid none;
+            border-radius:8px;
+            width:120px;
+            height:40px;
+            cursor:pointer;
+        }
+
+
+        #remove div img:nth-child(1)
+        {
+            width:160px;
+            height:132px;
+            border-radius:16px;
+            position: relative;
+        }
+        #remove div:nth-child(2)
+        {
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            width:160px;
+            position:relative;
+        }
+        #remove div p
+        {
+            margin:4px 0 0 0;
+            font-weight: bold;
+            
+        }
+        #remove div p:nth-child(2)
+        {
+            grid-column:1/2;
+            font-weight: 200;
+        }
+        .icon
+        {   
+            position:absolute;
+            width:40px;
+            height:40px;
+            justify-self: right;
+            grid-column:2;
+            grid-row:1/2;
+            box-shadow:1px 1px 12px rgb(176, 229, 176);
+            border-radius:20px;
+        }
+        #especial
+        {
+            box-shadow: 1px 2px 8px rgb(210, 203, 203);
+            border-radius:30px;
+            /* border:2px solid var(--text-input-field);
+            border-radius:30px; */
+        }
+    </style>
+<body>
+    <main id="contenedor">
+        <header id="header">
+            <img src="./icons/icon_menu.svg" alt="menu" id="menu">     
+            <img src="./logo/logo_yard_sale.svg" alt="" id="yard">
+            <img src="./icons/icon_shopping_cart_notification.svg" alt="">
+        </header>
+        <nav id="nav">
+            <div id="busqueda">
+                <img src="./icons/lupa.png" alt="">
+                <input type="text" placeholder="Search product">
+            </div>
+            <ul>
+                <li> <a href="/">All</a></li>
+                <li> <a href="/">Clothes</a> </li>
+                <li> <a href="/">Electronics</a></li>
+                <li> <a href="/">Furnite</a></li>
+                <li> <a href="/">Toys</a></li>
+            </ul>
+        </nav>    
+        <section id="section">
+            <p><b id="negrita">Order</b>: &nbsp;Most recent &nbsp; <img src="./icons/flechita.svg" alt="flechita "> </p>
+        </section>
+        <article id="article">
+            <div id="remove">
+                <div>
+                    <img src="https://images.pexels.com/photos/7300738/pexels-photo-7300738.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="refrigerador">
+                </div>
+                <div>
+                    <p class="precio">$ 120,00 <br></p>
+                    <p>Refrigerador</p>
+                    <img src="./icons/bt_add_to_cart.svg" alt="" class="icon">
+                </div>
+            </div>
+            <div id="remove">
+                <div>
+                    <img src="https://images.pexels.com/photos/7300738/pexels-photo-7300738.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="refrigerador">
+                    <p id="pespecial"><strong>Removed<br>from cart</strong></p>
+                </div>
+                <div>
+                    <p class="precio">$ 120,00 <br></p>
+                    <p>Refrigerador</p>
+                    <img src="./icons/bt_added_to_cart.svg" alt="" class="icon" id="especial">
+                </div>
+            </div>
+            <div id="remove">
+                <div>
+                    <img src="https://images.pexels.com/photos/7300738/pexels-photo-7300738.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="refrigerador">
+                    <p></p>
+                </div>
+                <div>
+                    <p class="precio">$ 120,00 <br></p>
+                    <p>Refrigerador</p>
+                    <img src="./icons/bt_add_to_cart.svg" alt="" class="icon">
+                </div>
+            </div>
+            <div id="remove">
+                <div>
+                    <img src="https://images.pexels.com/photos/7300738/pexels-photo-7300738.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="refrigerador">
+                    <p></p>
+                </div>
+                <div>
+                    <p class="precio">$ 120,00 <br></p>
+                    <p>Refrigerador</p>
+                    <img src="./icons/bt_add_to_cart.svg" alt="" class="icon">
+                </div>
+            </div>
+            <div id="remove">
+                <div>
+                    <img src="https://images.pexels.com/photos/7300738/pexels-photo-7300738.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="refrigerador">
+                    <p></p>
+                </div>
+                <div>
+                    <p class="precio">$ 120,00 <br></p>
+                    <p>Refrigerador</p>
+                    <img src="./icons/bt_add_to_cart.svg" alt="" class="icon">
+                </div>
+            </div>
+            <div id="remove">
+                <div>
+                    <img src="https://images.pexels.com/photos/7300738/pexels-photo-7300738.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="refrigerador">
+                    <p></p>
+                </div>
+                <div>
+                    <p class="precio">$ 120,00 <br></p>
+                    <p>Refrigerador</p>
+                    <img src="./icons/bt_add_to_cart.svg" alt="" class="icon">
+                </div>
+            </div>
+            <div id="remove">
+                <div>
+                    <img src="https://images.pexels.com/photos/7300738/pexels-photo-7300738.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="refrigerador">
+                    <p></p>
+                </div>
+                <div>
+                    <p class="precio">$ 120,00 <br></p>
+                    <p>Refrigerador</p>
+                    <img src="./icons/bt_add_to_cart.svg" alt="" class="icon">
+                </div>
+            </div>
+            <div id="remove">
+                <div>
+                    <img src="https://images.pexels.com/photos/7300738/pexels-photo-7300738.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="refrigerador">
+                    <p></p>
+                </div>
+                <div>
+                    <p class="precio">$ 120,00 <br></p>
+                    <p>Refrigerador</p>
+                    <img src="./icons/bt_add_to_cart.svg" alt="" class="icon">
+                </div>
+            </div>
+            <div id="remove">
+                <div>
+                    <img src="https://images.pexels.com/photos/7300738/pexels-photo-7300738.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="refrigerador">
+                    <p></p>
+                </div>
+                <div>
+                    <p class="precio">$ 120,00 <br></p>
+                    <p>Refrigerador</p>
+                    <img src="./icons/bt_add_to_cart.svg" alt="" class="icon">
+                </div>
+            </div>
+            <div id="remove">
+                <div>
+                    <img src="https://images.pexels.com/photos/7300738/pexels-photo-7300738.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="refrigerador">
+                    <p></p>
+                </div>
+                <div>
+                    <p class="precio">$ 120,00 <br></p>
+                    <p>Refrigerador</p>
+                    <img src="./icons/bt_add_to_cart.svg" alt="" class="icon">
+                </div>
+            </div>
+            <div id="remove">
+                <div>
+                    <img src="https://images.pexels.com/photos/7300738/pexels-photo-7300738.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="refrigerador">
+                    <p></p>
+                </div>
+                <div>
+                    <p class="precio">$ 120,00 <br></p>
+                    <p>Refrigerador</p>
+                    <img src="./icons/bt_add_to_cart.svg" alt="" class="icon">
+                </div>
+            </div>
+            <div id="remove">
+                <div>
+                    <img src="https://images.pexels.com/photos/7300738/pexels-photo-7300738.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="refrigerador">
+                    <p></p>
+                </div>
+                <div>
+                    <p class="precio">$ 120,00 <br></p>
+                    <p>Refrigerador</p>
+                    <img src="./icons/bt_add_to_cart.svg" alt="" class="icon">
+                </div>
+            </div>
+
+            <div id="remove">
+                <div>
+                    <img src="https://images.pexels.com/photos/7300738/pexels-photo-7300738.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="refrigerador">
+                    <p></p>
+                </div>
+                <div>
+                    <p class="precio">$ 120,00 <br></p>
+                    <p>Refrigerador</p>
+                    <img src="./icons/bt_add_to_cart.svg" alt="" class="icon">
+                </div>
+            </div>
+            <div id="remove">
+                <div>
+                    <img src="https://images.pexels.com/photos/7300738/pexels-photo-7300738.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="refrigerador">
+                    <p></p>
+                </div>
+                <div>
+                    <p class="precio">$ 120,00 <br></p>
+                    <p>Refrigerador</p>
+                    <img src="./icons/bt_add_to_cart.svg" alt="" class="icon">
+                </div>
+            </div>
+        </article>
+    </main>
+</body>
+</html>

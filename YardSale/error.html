@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root
+        {
+            --white:#FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --sm:14px;
+            --md:16px;
+            --lg:18px;
+            --oscuro:#232830;
+        }
+        body
+        {
+            margin:0;
+            font-family:'Quicksand', sans-serif;
+        }
+        #contenedor
+        {
+            display:grid;
+            height:100vh;
+            width:100%;
+            place-items:center;
+        }
+
+        #header img
+        {
+            padding-top:80px;
+            height:40px;
+        }
+        #cuenta p:nth-child(1)
+        {
+            color:red;
+            font-size:var(--sm);
+            font-weight:bold;
+        }
+        #cuenta input
+        {
+            width:94vw;
+            height:40px;
+            border-radius:8px;
+    
+        }
+        #cuenta input:nth-child(2)
+        {
+            border-radius:8px;
+            border:1px solid red;
+            background: rgb(255, 239, 239);
+        }
+        #cuenta input:nth-child(4)
+        {
+            border:none;
+            background:var(--text-input-field);
+        }
+        #cuenta input::placeholder
+        {
+            padding:12px;
+        }
+        #log
+        {
+            display:grid;
+            width:100%;
+            place-items: center;
+            height:100%;
+        }
+        #log button
+        {
+            width:96%;
+            margin:24px;
+            height:52px;
+            border:none;
+            border-radius:8px;
+            
+        }
+        #log p
+        {
+            margin:0;
+            color: var(--hospital-green);
+            font-weight:bold;
+        }
+        #log button:nth-child(1)
+        {
+            background:var(--very-light-pink);
+            color:white;
+            font-weight: bold;
+            font-size:var(--lg);
+        }
+        #log button:nth-child(3)
+        {
+            
+            background: white;
+            border:1px solid var(--hospital-green);
+            color:var(--hospital-green);
+            font-weight:bold;
+            font-size: var(--md);
+            
+        }
+
+    </style>
+<body>
+    <main id="contenedor">
+        <header id="header">
+            <img src="./logo/logo_yard_sale.svg" alt="logo">
+        </header>
+        <article id="cuenta">
+            <p>Enter a valid email address</p>
+            <input type="text" placeholder="blabla@gmail.com">
+            <p>Password</p>
+            <input type="text" placeholder="*********">
+        </article>
+        <article id="log">
+            <button >Log in</button>
+            <p>Forgot my password</p>
+            <button id="secondary-button">Sign up</button>
+        </article>
+    </main>
+</body>
+</html>

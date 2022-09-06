@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root
+        {
+            --white:#FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --sm:14px;
+            --md:16px;
+            --lg:18px;
+            --oscuro:#232830;
+        }
+        body
+        {
+            margin:0;
+            font-family:'Quicksand', sans-serif;
+            
+            
+        }
+        #contenedor
+        {
+            width:100vw;
+            height:100vh;
+            display:flex;
+            flex-direction:column;
+        }
+        #iconos
+        {
+            display:flex;
+            justify-content:space-between;
+            border-bottom: 1px solid var(--very-light-pink);
+            box-shadow:1px 2px 4px var(--very-light-pink);
+            
+        }
+        #iconos img
+        {
+            width:40px;
+            height:40px;
+            padding:8px;
+        }
+        #article
+        {
+            display:grid;
+            margin:12px;
+
+        }
+        #article header
+        {
+            margin-bottom:16px;
+        }
+        #article form
+        {
+            display:grid;
+            
+        }
+        #article form label
+        {
+            margin:4px;
+            font-weight:bold;
+        }
+        #article form input
+        {
+            margin-bottom:16px;
+            height:40px;
+            border:none;
+            background:var(--text-input-field);
+            border-radius:8px;
+            
+        }
+        #article form input::placeholder
+        {
+            padding:8px;
+            font-size:var(--md);
+            
+        }
+        #article footer
+        {
+            height:100%;
+            justify-content:end;
+        }
+        #contenedor footer
+        {
+            height:100%;
+            display:flex;
+            flex-direction:column;
+            justify-content:end;
+        }
+        #contenedor footer form
+        {
+            padding:12px;
+        }
+        #contenedor footer form button
+        {
+            width:100%;
+            height:48px;
+            border:none;
+            border-radius:8px;
+            background:var(--hospital-green);
+            cursor:pointer;
+            color:var(--white);
+            font-size: var(--lg);
+            font-weight:bold;
+        }
+    </style>
+<body>
+    <main id="contenedor">
+        <header id="iconos">
+            <img src="https://cdn-icons-png.flaticon.com/512/2976/2976215.png" alt="menu">
+            <img src="https://cdn-icons-png.flaticon.com/512/5978/5978035.png" alt="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/2478/2478188.png" alt="carrito">
+        </header>
+        <article id="article">
+            <header><h2>My account</h2></header>
+            <section>
+                <form action="cuenta">
+                    <label for="Nombre">Name</label>
+                    <input type="text" placeholder="Camila Yokoo">
+                    <label for="correo">Email addres</label>
+                    <input type="text" placeholder="blabla@example.com">
+                    <label for="contraseña">Password</label>
+                    <input type="passowrd" placeholder="*********">
+                </form>
+            </section>    
+        </article>
+        <footer>
+            <form >
+                <button>Create</button>
+            </form>
+        </footer>
+    </main>
+</body>
+</html>

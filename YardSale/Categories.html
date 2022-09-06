@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root
+        {
+            --white:#FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --sm:14px;
+            --md:16px;
+            --lg:18px;
+            --oscuro:#232830;
+        }
+        body
+        {
+            margin:0;
+            font-family:'Quicksand', sans-serif;
+            
+            
+        }
+        #contenedor
+        {
+            display:flex;
+            flex-direction:column;
+            width:100%;
+            height:100vh;
+        }
+        #contenedor h3
+        {
+            padding-left:40px;
+        }
+        #contenedor ul
+        {
+            list-style:none;
+            
+        }
+        #lista li
+        {
+            padding-bottom:30px;
+        }
+        #lista li a
+        {
+            text-decoration: none;
+            color:black;
+            font-size:var(--md);
+            font-weight:bold;
+        }
+        #log 
+        {
+            height:100%;
+            display:flex;
+            flex-direction:column;
+            justify-content: end;
+        }
+        #log li a
+        {
+            text-decoration: none;
+            color:var(--hospital-green);
+            font-size:var(--md);
+            font-weight:bold;
+        }
+
+    </style>
+<body>
+    <main id="contenedor">
+        <h3>CATEGORIES</h3>
+        <ul id="lista">
+            <li> <a href="/">All</a></li>
+            <li> <a href="/">Clothes</a></li>
+            <li> <a href="/">Electronics</a></li>
+            <li> <a href="/">Furnitures</a></li>
+            <li> <a href="/">Toys</a></li>
+            <li> <a href="/">Others</a></li>
+        </ul>
+        <ul id="log">
+            <li>
+                <a href="/">Log in</a>
+            </li>
+        </ul>
+    </main> 
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root
+        {
+            --white:#FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --sm:14px;
+            --md:16px;
+            --lg:18px;
+            --oscuro:#232830;
+        }
+        body
+        {
+            margin:0;
+            font-family:'Quicksand', sans-serif;
+            
+            
+        }
+        #contenedor
+        {
+            display:grid;
+            width:100%;
+            height:100%;
+        }
+        header
+        {
+            display:flex;
+            justify-content: space-between;
+            border-bottom:1px solid var(--very-light-pink);
+            padding:8px;
+            margin:0;
+        }
+
+        #refri
+        {
+            width:100%;
+            height:60%;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius:8px;
+        }
+        #form
+        {
+            display:flex;
+            position:relative
+        }
+        #form ul
+        {   
+            display:inline-block;
+            width:100%;
+            justify-content: space-between;
+            list-style:none;
+            position:relative
+            
+        }
+        #form li
+        {
+            position:relative;
+            
+            
+        }
+        #form button
+        {
+            border-radius:50%;
+            width:16px;
+            height:16px;
+            border:none;
+            background:var(--text-input-field);
+            
+        }
+        #form button:hover
+        {
+            border-radius:50%;
+            width:20px;
+            height:20px;
+            border:none;
+            background:var(--very-light-pink);
+            cursor:pointer;
+        }
+      
+        #primero
+        {
+            position:absolute;
+            left:150%;
+            transform:translate(-50%, -50%);
+            
+        }
+        #segundo
+        {
+            position:absolute;
+            right:50%;
+            transform:translate(-50%, -50%);
+           
+        }
+        #tercero
+        {
+            position:absolute;
+            left:-90%;
+            right:50%;
+            transform:translate(-50%, -50%);
+        }
+        article p
+        {
+            margin:0 12px 4px 12px;
+        }
+        article p:nth-child(4)
+        {
+            margin: 0 12px 20px 12px;
+            font-weight:200;
+
+        }
+        article p:nth-child(5)
+        {
+            font-weight:200;
+            margin: 0 12px 40px 12px;
+        }
+        #addto
+        {
+           width:340px;
+           height:56px;
+           margin:24px 12px 0 12px;
+           background:var(--hospital-green);
+           border:none;
+           border-radius:8px;
+           color:var(--white);
+           font-size:var(--lg);
+           font-weight:bold;
+        }
+    </style>
+<body>
+    <main id="contenedor">
+        <header>
+            <img src="./icons/icon_menu.svg" alt="menu">
+            <img src="./logo/logo_yard_sale.svg" alt="logo">
+            <img src="./icons/icon_shopping_cart_notification.svg" alt="carrito">
+        </header>
+        <article>
+            <img src="https://images.pexels.com/photos/3230214/pexels-photo-3230214.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="refrigerados" id="refri">
+            <form action="button" id="form">
+                <ul>
+                    <li>
+                        <button id="primero"></button>
+                    </li>
+                </ul>    
+                <ul>
+                    <li>
+                        <button id="segundo"></button>
+                    </li>
+                </ul>
+                <ul>
+
+                    <li>
+                        <button id="tercero"></button>
+                    </li>
+                </ul>
+                
+            </form>
+            <p id="precio"><b>$120,00</b></p>
+            <p>Retro refrigerator</p>
+            <p>With its functional and practial interior, this refrigerator also fulfills
+                decorative function, adding personality and a retro-vintage aesthetic to your
+                kitchen or workplace.
+            </p>
+            <form action="button">
+                <button id="addto"><img src="./icons/icon_shopping_cart.svg" alt="" id="carrito">Add to cart</button>
+            </form>
+        </article>    
+            
+    </main>
+</body>
+</html>
