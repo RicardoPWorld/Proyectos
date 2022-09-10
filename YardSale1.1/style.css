@@ -24,9 +24,13 @@ body
     font-family: 'Quicksand', sans-serif;
     font-size:1.6rem;
 }
+.inactive
+{
+    display:none;
+}
 .nav-header
 {
-    border: 0.3rem solid black;
+    border-bottom: 0.1rem solid var(--very-light-pink);
     width:100%;
     display:grid;
     grid-template-columns:auto 1fr auto auto auto;
@@ -84,6 +88,7 @@ body
 }
 .nav-email
 {
+   position:relative;
    font-weight:200; 
    cursor:pointer;
 }
@@ -91,6 +96,51 @@ body
 {
    order:2;
    padding:1.2rem 2.6rem;
-   cursor:pointer;
+   cursor:pointer
+}
 
+.nav-menu-usuario
+{
+    position:absolute;
+    list-style: none;
+    top:39px;
+    right:-30px;
+    border:0.1rem solid var(--very-light-pink);
+    width:15rem;
+    border-radius: 8px;
+    background-color: var(--white);
+}
+.nav-menu-usuario li
+{
+    margin:0 16px;
+    padding:12px;
+    text-align: end;
+    width:80%;
+}
+.nav-menu-usuario li:nth-child(2)
+{
+    padding-bottom: 32px;
+}
+.nav-menu-usuario-singout
+{
+    border-top:1px solid var(--very-light-pink);
+    padding-top:16px;    
+}
+.orders
+{
+    text-decoration: none;
+    font-weight: bold;
+    color:black;
+}
+.account
+{
+    text-decoration: none;
+    font-weight: bold;
+    color:black;
+} 
+ .signout
+{
+    text-decoration: none;
+    font-weight: bold;
+    color:var(--hospital-green);
 }
