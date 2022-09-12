@@ -28,6 +28,7 @@ body
 {
     display:none;
 }
+
 .nav-header
 {
     border-bottom: 0.1rem solid var(--very-light-pink);
@@ -96,7 +97,11 @@ body
 {
    order:2;
    padding:1.2rem 2.6rem;
+}
+.nav-icon-cart-img
+{
    cursor:pointer
+
 }
 /* Menu para del usuario */
 .nav-menu-usuario
@@ -149,12 +154,13 @@ body
 .cart-product
 {
     position:absolute;
-    justify-self: flex-end;
-    top:600px;
+    /* justify-self: flex-end; */
+    top:60px;
     background-color: var(--white);
     width:540px;
-    display:grid;
+    /* display:grid; */
     border:3px solid var(--text-input-field);
+    right:0;
 }
 .cart-product-container
 {
